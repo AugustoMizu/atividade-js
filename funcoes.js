@@ -34,5 +34,20 @@ function contarOcorrencias(texto, palavra) {
     const regex = new RegExp(`\\b${palavra}\\b`, "gi");
     return (texto.match(regex) || []).length;
 }
+
+function obterUsuario(id, db) {
+    return db.find(user => user.id === id) || null;
+}
+
 // funcoes.js
 // Exibindo funcoes.js…
+module.exports = {
+    soma,
+    ehPar,
+    paraMaiusculas,
+    filtrarMaioresQue,
+    obterUsuario,
+    obterTemperatura,
+    contarOcorrencias,
+    obterUsuario
+};
